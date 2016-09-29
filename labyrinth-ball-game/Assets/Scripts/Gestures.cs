@@ -78,7 +78,7 @@ public class Gestures : MonoBehaviour {
 					currentDirection = Direction.Up;
 				} else if (dir.y < 0 && (-dir.y > dir.x && -dir.y > -dir.x)) { // Down
 					lastDirection = Direction.Down;
-					currentDirection = Direction.Up;
+					currentDirection = Direction.Down;
 				}
 			}
 		}

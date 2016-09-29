@@ -11,13 +11,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update () {
-		//var dir = Quaternion.Euler(new Vector3 (-1, 0, 0) * 90) * Input.acceleration.normalized;
-
 		// Direction based on phones orientation
 		var dir = Input.acceleration.normalized;
 		// Rotate direction around x axis
 		dir = Quaternion.Euler(new Vector3(-1, 0, 0) * 90) * dir;
-		// 
+		// Flip z axis
 		dir.z *= -1;
 		rb.AddForce(dir * force);
 
